@@ -10,4 +10,4 @@ print(con.execute("Select HomeTeam,AwayTeam,FTR from Matches where Season BETWEE
 print("All the matches where the Home Team name begins with “A” and Away Team name begins with “M”")
 print(con.execute("Select HomeTeam,AwayTeam,FTR from Matches where HomeTeam LIKE 'A%' and AwayTeam LIKE 'M%'").fetchall())
 con.close()
-.
+
