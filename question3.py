@@ -17,5 +17,4 @@ print(" The Unique_Team_ID and TeamName from Unique_Teams and AvgAgeHome, Season
 print(con.execute("Select Unique_Teams.Unique_Team_ID,Unique_Teams.TeamName,Teams.AvgAgeHome,Teams.Season,Teams.ForeignPlayersHome from Unique_Teams JOIN Teams ON Unique_Teams.TeamName = Teams.TeamName LIMIT 5").fetchall())
 print(" The highest Match_ID for each team that ends in a “y” or a “r”. Along with the maximum Match_ID, display the Unique_Team_ID Teams_in_Matches and the TeamName from Unique_Teams : ")
 print(con.execute("Select MAX(Match_id),Teams_in_Matches.Unique_Team_ID,Unique_Teams.TeamName from Teams_in_Matches JOIN Unique_Teams ON Teams_in_Matches.Unique_Team_ID = Unique_Teams.Unique_Team_ID where TeamName LIKE '%y' OR TeamName LIKE '%r' GROUP BY Teams_in_Matches.Unique_Team_ID, TeamName").fetchall())
-
 con.close()
