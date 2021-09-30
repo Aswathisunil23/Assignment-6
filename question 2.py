@@ -14,4 +14,4 @@ print(con.execute("Select SUM(KaderHome) from Teams where Season ='2014' ").fetc
 print("Average home goals scored by Man United")
 print(con.execute("Select ROUND(AVG(FTHG), 2) FROM Matches where HomeTeam = 'Man United'").fetchall())
 con.close()
-.
+
